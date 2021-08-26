@@ -1,5 +1,6 @@
 import dash_bootstrap_components as dbc
 import dash_html_components as html
+from dash.dependencies import Input, Output, State
 import dash
 
 app = dash.Dash(__name__, external_stylesheets=[dbc.themes.DARKLY], meta_tags = [{'name':'viewport', 'content':'width=device-width, initial-scale=1.0'}])
@@ -28,8 +29,10 @@ app.layout = dbc.Container([
                         "Pure socialist, has all his money in stocks and accumulates tons of wealth. Its a weeb, a coomer. Linux elitist very proud of his hentai linux super secure server. Always complains capitalism evil while looking at how much his stocks have grown",
                         className="card-text",
                     ),
+                    html.Audio(src='/assets/kiniro-mosaic-ayaya-ayaya_Hdugg5f.mp3', controls=True),
                 ]
             ),
+
         ], ),
     dbc.Card(
         [
@@ -71,6 +74,12 @@ app.layout = dbc.Container([
             ),
         ], ),
 ])
+
+# @app.callback(Ouput =
+#               Input('playAyayaButton', 'n_clicks'))
+#
+# def playAyaya(clicks)
+#     html.
 
 if __name__ == '__main__':
     app.run_server(debug=True, host='192.168.0.16', port=8050)
